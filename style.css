@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap')
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d2ccbf;
+
+}
+.container{
+    background-color: #fff;
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    box-shadow: 0 5px 10px rgba(196, 33, 33, 0.1));
+}
+.container header{
+    position: relative;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-decoration: underline;
+    font-weight: 600;
+    color: #333333;
+
+}
+.container header::before{
+    
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 27px;
+    border-radius: 8px;
+    
+    background-color:#1c202c ;
+}
+.container form{
+    position: relative;
+    margin-top: 15px ;
+    min-height: 490px;
+    background-color: #f3f3f3;
+
+}
+.container form .details{
+    margin-top: 30px;
+}
+.container form .details.ID{
+    margin-top: 10px;
+}
+.container form .title{
+    display: block;
+    font-size: 16px;
+    font-weight: 550;
+    margin: 6px 0 8px;
+    color: #333;
+
+}
+.container form .fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+form .fields .input-field{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 3 - 15px);
+    margin: 4px 0;
+}
+.input-field label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+
+}
+.input-field input{
+    height: 42px;
+    margin: 8px 0;
+    padding: 0 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    outline: none;
+    border: 1px solid #aaa;
+}
+.input-field input:is(:focus, :valid){
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.input-field input[type="date"]{
+    color: #707070;
+}
+.input-field input[type="date"]:valid{
+    color: #333;
+}
+.container form  button{
+    
+    height: 40px;
+    
+    border: 1px solid blue;
+    margin:20px 0 0 30px;
+    width: 130px;
+    background-color: #0839c0;
+    color: #fff;
+    
+    border-radius: 5px;
+}
+
+form button:hover{
+    background-color: #829ff0;
+    align-self: center;
+}
+.popup{
+    width: 400px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 6px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%)scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px ;
+    color: #333;
+   visibility: hidden;
+   transition: transform 0.4s, top 0.4s;
+}
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%)scale(1);
+}
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+
+}
+.popup button{
+    width: 100%;
+    outline: none;
+    margin-top: 50px;
+    
+    padding: 10px 0 ;
+    background: #6fd649;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    cursor: pointer;
+    
+}
